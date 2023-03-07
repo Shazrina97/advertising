@@ -9,8 +9,9 @@ Original file is located at
 
 import streamlit as st
 import pandas as pd
-from sklearn import datasets
-from sklearn.ensemble import RandomForestClassifier
+import numpy as np
+from sklearn.linear_model import LinearRegression
+
 df = pd.read_csv('Advertising.csv')
 
 st.write("""
@@ -39,11 +40,13 @@ uif = user_input_features()
 st.subheader('User Input parameters')
 st.write(uif)
 
-sales = datasets.load_sales()
-x = sales.data
-y = sales.target
+sales =pd.read_csv("Advertising.csv")
+x = sales [['TV', 'Radio', 'Newspaper']]
+y = sales ['Sales']
 
-clf = RandomForestClassifier()
-clf.fit(x, y)
+model = LinearRegression().fit(x, y)
+
+r_sq = model.score(x, y)
+print(f"coefficient of determination: {r_sq}")
 
 
