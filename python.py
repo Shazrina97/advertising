@@ -43,11 +43,10 @@ st.write(uif)
 data = pd.read_csv('Advertising.csv')
 data = data.drop(data.columns[0], axis=1)
 
-
 x = data[['TV', 'Radio', 'Newspaper']]
-y = data['Sales']
+y = data[ 'Sales' ]
 
-regr = LinearRegression()
+regr = linear_model.LinearRegression()
 regr.fit(x,y)
 
 prediction = regr.predict(data)
