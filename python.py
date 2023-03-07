@@ -41,7 +41,7 @@ uif = user_input_features()
 st.subheader('User Input parameters')
 st.write(uif)
 
-sales = datasets.load_sales()
+sales = datasets.sales()
 X = sales.data
 Y = sales.target
 
