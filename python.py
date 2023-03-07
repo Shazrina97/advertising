@@ -10,7 +10,7 @@ Original file is located at
 import streamlit as st
 import pandas as pd
 import numpy as np
-from sklearn import LinearRegression
+from sklearn.linear_model import LinearRegression
 
 df = pd.read_csv('Advertising.csv')
 
