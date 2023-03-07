@@ -40,8 +40,8 @@ st.subheader('User Input parameters')
 st.write(uif)
 
 sales = pd.read_csv("Advertising.csv")
-X = sales.data
-Y = sales.target
+X = sales [['TV', 'Radio', 'Newspaper']]
+Y = sales ['Sales']
 
 clf = RandomForestClassifier()
 clf.fit(X, Y)
