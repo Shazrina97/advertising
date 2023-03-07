@@ -40,14 +40,17 @@ uif = user_input_features()
 st.subheader('User Input parameters')
 st.write(uif)
 
+data = pd.read_csv('Advertising.csv')
+data = data.drop(data.columns[0], axis=)
 
-x = df[['TV', 'Radio', 'Newspaper']]
-y = df['Sales']
+
+x = data[['TV', 'Radio', 'Newspaper']]
+y = data['Sales']
 
 regr = linear_model.LinearRegression()
 regr.fit(x,y)
 
-prediction = regr.predict(df)
+prediction = regr.predict(data)
 
 st.subheader('Prediction')
 st.write(prediction[0])
