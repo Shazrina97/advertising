@@ -46,10 +46,10 @@ data = data.drop(data.columns[0], axis=1)
 x = data[['TV', 'Radio', 'Newspaper']]
 y = data[ 'Sales' ]
 
-regr = linear_model.LinearRegression()
+regr = LinearRegression()
 regr.fit(x,y)
 
-prediction = regr.predict(data)
+prediction = regr.predict(uif)
 
 st.subheader('Prediction')
 st.write(prediction[0])
