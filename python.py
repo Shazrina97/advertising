@@ -47,6 +47,7 @@ model = LinearRegression()
 
 model.fit(x, y)
 
-
+y_pred = model.predict(x)
+print(f"predicted response:\n{y_pred}")
 
 
