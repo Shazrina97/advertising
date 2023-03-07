@@ -40,14 +40,17 @@ uif = user_input_features()
 st.subheader('User Input parameters')
 st.write(uif)
 
+
 x = df[['TV', 'Radio', 'Newspaper']]
 y = df['Sales']
 
-model = LinearRegression()
+regr = linear_model.LinearRegression()
+regr.fit(x,y)
 
-model.fit(x, y)
+prediction = regr.predict(df)
 
-y_pred = model.predict(x)
-print(f"predicted response:\n{y_pred}")
+st.subheader('Prediction')
+st.write(prediction[0])
+
 
 
