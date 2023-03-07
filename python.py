@@ -18,6 +18,8 @@ st.write("""
 This app predicts the **Number of Sales**!
 """)
 
+st.write("Below are the data:")
+
 st.write(df)
 
 st.sidebar.header('User Input Parameters')
