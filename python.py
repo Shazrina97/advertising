@@ -41,7 +41,7 @@ st.subheader('User Input parameters')
 st.write(uif)
 
 data = pd.read_csv('Advertising.csv')
-data = data.drop(data.columns[0], axis=)
+data = data.drop(data.columns[0], axis=1)
 
 
 x = data[['TV', 'Radio', 'Newspaper']]
