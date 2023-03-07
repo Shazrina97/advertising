@@ -46,15 +46,4 @@ Y = sales.target
 clf = RandomForestClassifier()
 clf.fit(X, Y)
 
-prediction = clf.predict(uif)
-prediction_proba = clf.predict_proba(uif)
 
-st.subheader('Class labels and their corresponding index number')
-st.write(sales.target_names)
-
-st.subheader('Prediction')
-st.write(sales.target_names[prediction])
-#st.write(prediction)
-
-st.subheader('Prediction Probability')
-st.write(prediction_proba)
