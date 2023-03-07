@@ -41,7 +41,7 @@ uif = user_input_features()
 st.subheader('User Input parameters')
 st.write(uif)
 
-sales = datasets.sales()
+sales = pd.read_csv('Advertising.csv')
 X = sales.data
 Y = sales.target
 
