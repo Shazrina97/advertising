@@ -11,14 +11,13 @@ import streamlit as st
 import pandas as pd
 from sklearn import datasets
 from sklearn.ensemble import RandomForestClassifier
-
-f = open("Advertising.csv", "r")
-print(f.read())
+df = pd.read_csv('Advertising.csv')
 
 st.write("""
 # Number of Sales Prediction App
 This app predicts the **Number of Sales**!
 """)
+
 
 st.sidebar.header('User Input Parameters')
 
