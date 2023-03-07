@@ -20,4 +20,4 @@ This app predicts the **Number of Sales**!
 
 st.write(df)
 
-
+st.sidebar.header('User Input Parameters')
